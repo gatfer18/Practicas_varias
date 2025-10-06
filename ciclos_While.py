@@ -110,6 +110,60 @@ while i < len(numero_str):
     print(numero_str[i], end=' - ')
     i += 1
 
+print('\n\n*** EJERCICIO 8.- Leer números hasta que el usuario ingrese un número negativo.')
+
+numeros = [] # NOS CREAMOS UNA LISTA PARA ALMACENAR LOS NUMEROS
+
+num = int(input( 'Ingresa un numero (ingresa un numero negativo para detener: )'))
+
+while num >= 0:
+    numeros.append(num)#con esto añadimos el numero a la lista
+    num = int(input( 'Inserte otro numero: '))
+print(f'Numeros Ingresados: {numeros}')
+
+
+print('\n\n*** EJERCICIO 9.- Generar los primeros N números de la serie de Fibonacci.')
+
+n = int(input( '¿cuantos numeros de la serie fibonacci quiere ver?: '))
+
+a, b = 0, 1
+contador = 0
+
+while contador < n:
+    print(a, end=' - ')
+    #calculamos el siguiente numero
+    siguiente  = a + b
+    #Se avanza en la serie
+    a = b
+    b = siguiente
+    contador += 1
+
+
+print('\n\n*** EJERCICIO 10.- Simular un cajero automático: '
+      'pedir una cantidad inicial de saldo y permitir retirar dinero hasta que no haya suficiente..')
+
+#Preestablecemos un saldo fijo
+print(f'\nBienvenido a tu cajero automatico ')
+
+saldo = 1100 #saldo inicial fijo
+
+while saldo > 0:
+    print(f'\nTu saldo actual es {saldo:.2f}')
+    retiro = float(input( 'Ingresa la cantidad que deseas retirar: (0 para salir del sistema): '))
+
+    if retiro == 0:
+        print( 'Operacion cancelada, Gracias por usar nuestro cajero')
+        break
+    elif retiro > saldo:
+        print(' Saldo insuficiente, Ingresa otro monto')
+    else:
+        saldo -= retiro
+        print(f'f has retirado ${retiro:.2f}. saldo restante actual: ${saldo:.2f} ')
+if saldo <= 0:
+    print('\nSaldo agotado.fin de la operacion ')
+
+
+
 
 
 
