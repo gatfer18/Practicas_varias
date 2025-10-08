@@ -17,6 +17,22 @@ for i in range(1,13):
 
 print('\n\nEJERCICIO 3.Imprimir todos los números pares entre 1 y 50..')
 
-print('\n\nEJERCICIO 4.Calcular el factorial de un número dado' )
+for numero in range(1,51):
+    if numero % 2 == 0:
+        print(numero, end='-')
+
+
+
+print('\n\nEJERCICIO 4.Calcular el factorial de un número dado')
+
+numero =  int(input("Ingrese un numero: "))
+factorial = 1
+for i in range(1,numero + 1):
+    factorial = factorial * i
+
+print( f'El factorial del numero: {numero} es: {factorial:.2f} ' )
+
+
+
 
 print('\n\nEJERCICIO 5.Pedir 5 números al usuario y mostrar su promedio' )
