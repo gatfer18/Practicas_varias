@@ -36,3 +36,70 @@ print( f'El factorial del numero: {numero} es: {factorial:.2f} ' )
 
 
 print('\n\nEJERCICIO 5.Pedir 5 números al usuario y mostrar su promedio' )
+
+suma = 0
+for i in range(5):
+    numero = float(input( 'Ingresa un numero: '))
+    suma += numero
+
+promedio = suma / 5
+
+print( 'El promedio de los 5 numeros introducidos  es: ', promedio)
+
+
+print('\n\nEJERCICIO 6 .Contar cuántas vocales tiene una palabra ingresada por el usuario.' )
+
+palabra = input("Ingresa una palabre:  ").lower()
+vocales =  'aeiou'
+contador = 0
+
+for letra in palabra:
+    if letra in vocales:
+        contador += 1
+
+print(f"La palabra introducidad tiene: {contador}, Vocal(es).")
+
+
+print('\n\nEJERCICIO 7 .Mostrar los caracteres de una cadena, uno por línea.' )
+
+cadena = input("Escribe una Palabra o Frase: ").lower()
+
+for caracter in cadena:
+    print( caracter, end= ' - ')
+
+
+print('\n\nEJERCICIO 8 .. Contar hasta la edad: Pregunta al usuario su edad y '
+         ' muestra todos los años que ha cumplido, desde el 1 hasta su edad.' )
+
+
+edad = int(input("Inserta tu edad: "))
+
+for año in range (1, edad +1):
+    print(f"año, {año}: ¡Feliz cumpleaños numero {año}! ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
