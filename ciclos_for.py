@@ -74,20 +74,47 @@ print('\n\nEJERCICIO 8 .. Contar hasta la edad: Pregunta al usuario su edad y '
 
 edad = int(input("Inserta tu edad: "))
 
-for año in range (1, edad +1):
-    print(f"año, {año}: ¡Feliz cumpleaños numero {año}! ")
+for año in range (1, edad +  1):
+    print(f"año, {año}: ¡Feliz cumpleaños numero {año}! ", end=' - ')
+
+meses = edad * 12
+dias = edad * 365
+
+print("\n--- RESUMEN DE TU VIDA ---")
+print(f"Tienes {edad} año(s).")
+print(f"Has vivido aproximadamente {meses} meses.")
+print(f"Y unos {dias} días en total.")
+
+
+
+
+print('\n\nEJERCICIO 9.. Crea un programa que imprima un patrón de asteriscos en forma de triángulo ' )
+
+numero_filas = int(input("Ingresa la altura del triangulo: "))
+
+for fila in range(1, numero_filas + 1):
+    espacios_blanco =  ' ' * (numero_filas - fila)
+    asteriscos = '*' * (2 * fila -1)
+    print(f'{espacios_blanco}{asteriscos} ')
 
 
 
 
 
+print('\n\nEJERCICIO 10.. Crea un programa que imprima un patrón de asteriscos en forma de cuadrado ' )
 
+n = int(input("Ingrese la altura del cuadrado: "))
+borde = input("ingrese el caracter del borde de su cuadrado: ")
+relleno = input('Ingrese el caracter para el interior de su cuadrado: ')
 
+for i in range(1,n +1):
+    for j in range(1,n+1):
+        if i == 1 or i == n or j == 1 or j == n:
 
-
-
-
-
+            print(borde, end= " ")
+        else:
+           print( relleno, end=" ")
+    print()
 
 
 
