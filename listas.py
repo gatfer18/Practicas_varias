@@ -18,7 +18,9 @@ print(f'El ultimo elementode la lista es: {ultimo_elemento} ')
 
 print('\n\nEJERCICIO.- 2 Agrega un nuevo número a la lista anterior y muéstrala actualizada.')
 
-lista_A.append(55)
+lista_A.append(1)
+lista_A.append(524)
+lista_A.append(156)
 print(f'lista actualizada{lista_A}')
 
 print('\n\nEJERCICIO.- 3 Elimina el segundo elemento de la lista y muestra el resultado. ' )
@@ -53,25 +55,55 @@ for indice, fruta in enumerate(frutas):
 
 
 
+print('\n\nEJERCICIO.-6 Verifica si un número ingresado por el usuario está dentro de la lista' )
 
 
+while True:
+    usu = int(input( 'Ingresa un numero: '))
+
+    if usu in lista_A:
+        print( f'EL numero ingresado esta en la lista: {lista_A}' )
+        print( 'Saliendo del sistema.....')
+        break
+
+    else:
+        print('Vuelve a intentarlo: Ingresa un numero: ' )
+
+print('\n\nEJERCICIO.- 7 Ordena una lista de números de menor a mayor ' )
 
 
+lista_original = lista_A[:]
+print(f'Lista sin ordenar: {lista_original} ')
+lista_ordenado = sorted(lista_A)
+print(f'Lista  ordenada : {lista_ordenado} ')
 
 
+print('\n\nEJERCICIO.- 8  Crea una lista vacía y permite al usuario ingresar 5 nombres. Luego muéstralos todos. ' )
+
+nombres = []
+for i in range(5):
+    nombre = str(input( f'Ingresa un nombre: {i + 1 }:  '))
+    nombres.append(nombre)
+
+print('\nLos nombres que has ingresado son: ')
+for n in nombres:
+    print(n)
+
+print('\n\nEJERCICIO.- 9 Usa una lista por comprensión para generar los cuadrados del 1 al 10 ')
 
 
+cuadrados = [i ** 2 for i in range(1,11)]
+print(cuadrados)
 
+print('\n\nEJERCICIO.- 10 Combina dos listas de nombres y muestra la lista final. ')
 
+lista1 = [ 'Maria', ' Pedro', ' Raul']
+lista2 = [ 'Maritza', ' Peter', ' Jopse']
 
-
-
-
-
-
-
-
-
+lista_final = lista1 + lista2
+print(f'Lista Uno: {lista1} ')
+print(f'Lista Dos: {lista2} ')
+print(f'Lista Final: {lista_final} ')
 
 
 
